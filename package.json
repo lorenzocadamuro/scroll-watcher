@@ -1,0 +1,31 @@
+{
+  "name": "scroll-watcher",
+  "version": "1.0.0",
+  "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
+  "main": "scroll-watcher.js",
+  "scripts": {
+    "lint": "eslint scroll-watcher.js",
+    "prebuild": "npm run lint",
+    "build": "uglifyjs scroll-watcher.js > scroll-watcher.min.js"
+  },
+  "keywords": [
+    "scroll",
+    "element",
+    "active",
+    "alive",
+    "visible"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lorenzocadamuro/scroll-watcher"
+  },
+  "author": "Lorenzo Cadamuro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lorenzocadamuro/scroll-watcher/issues"
+  },
+  "homepage": "https://github.com/lorenzocadamuro/scroll-watcher",
+  "devDependencies": {
+    "uglify-js": "^2.6.2"
+  }
+}
