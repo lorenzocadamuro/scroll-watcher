@@ -16,7 +16,7 @@ The callback **onFocus** is called during page scrolling. By default it is calle
 Element is _active_ when it is the only element present on the viewport.<br />
 Element is _alive_ when a single part of it is visible on the viewport.
 
-You can use **self._activeProgress_** and **self._aliveProgress_** to tracking the element position.
+You can use **self._activeProgress_** and **self._aliveProgress_** to track the element position.
 
 ```javascript
 var myScrollWatcher = scrollWatcher(elm, {
