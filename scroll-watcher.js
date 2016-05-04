@@ -197,7 +197,7 @@
       }
 
       // on focus
-      if (typeof config.onFocus === 'function' && (force || config.persist) || module.isAlive) {
+      if (typeof config.onFocus === 'function' && ((force || config.persist) || module.isAlive)) {
         config.onFocus(module);
       }
 
