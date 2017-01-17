@@ -6,7 +6,7 @@
     "Lorenzo Cadamuro"
   ],
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
-  "main": "scroll-watcher.js",
+  "main": "dist/scroll-watcher.js",
   "moduleType": [],
   "license": "MIT",
   "ignore": [

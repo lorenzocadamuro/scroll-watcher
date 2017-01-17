@@ -2,12 +2,7 @@
   "name": "scroll-watcher",
   "version": "1.0.0",
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
-  "main": "scroll-watcher.js",
-  "scripts": {
-    "lint": "eslint scroll-watcher.js",
-    "prebuild": "npm run lint",
-    "build": "uglifyjs scroll-watcher.js > scroll-watcher.min.js"
-  },
+  "main": "dist/scroll-watcher.js",
   "keywords": [
     "scroll",
     "element",
@@ -26,6 +21,16 @@
   },
   "homepage": "https://github.com/lorenzocadamuro/scroll-watcher",
   "devDependencies": {
-    "uglify-js": "^2.6.2"
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.6",
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^1.2.2",
+    "uglifyify": "^3.0.4",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
