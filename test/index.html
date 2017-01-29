@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Scroll-watcher</title>
+  <title>Scrollo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 
@@ -69,12 +69,12 @@
 <body>
   <div id="foo"></div>
 
-  <script src="dist/scroll-watcher.js"></script>
+  <script src="dist/scrollo.js"></script>
 
   <script>
     var foo = document.getElementById('foo');
 
-    var myScrollWatcher = new ScrollWatcher(foo, {
+    var myScrollo = new Scrollo(foo, {
       onBeforeUpdate: function(self) {
         foo.style.height = window.innerHeight * 3 + 'px';
       },

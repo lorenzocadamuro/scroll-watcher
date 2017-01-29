@@ -1,8 +1,8 @@
 {
-  "name": "scroll-watcher",
+  "name": "scrollo",
   "version": "1.0.0",
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
-  "main": "dist/scroll-watcher.js",
+  "main": "dist/scrollo.js",
   "keywords": [
     "scroll",
     "element",
@@ -12,14 +12,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lorenzocadamuro/scroll-watcher"
+    "url": "https://github.com/lorenzocadamuro/scrollo"
   },
   "author": "Lorenzo Cadamuro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lorenzocadamuro/scroll-watcher/issues"
+    "url": "https://github.com/lorenzocadamuro/scrollo/issues"
   },
-  "homepage": "https://github.com/lorenzocadamuro/scroll-watcher",
+  "homepage": "https://github.com/lorenzocadamuro/scrollo",
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",

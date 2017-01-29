@@ -1,12 +1,12 @@
 {
-  "name": "scroll-watcher",
+  "name": "scrollo",
   "version": "1.0.0",
-  "homepage": "https://github.com/lorenzocadamuro/scroll-watcher",
+  "homepage": "https://github.com/lorenzocadamuro/scrollo",
   "authors": [
     "Lorenzo Cadamuro"
   ],
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
-  "main": "dist/scroll-watcher.js",
+  "main": "dist/scrollo.js",
   "moduleType": [],
   "license": "MIT",
   "ignore": [

@@ -1,7 +1,7 @@
 import getOffset from './get-offset';
 import extend from './extend';
 
-class ScrollWatcher {
+class Scrollo {
   constructor(elm, config) {
     this.elm = elm instanceof Element ? elm : null;
 
@@ -146,4 +146,4 @@ class ScrollWatcher {
   }
 }
 
-export default ScrollWatcher;
+export default Scrollo;

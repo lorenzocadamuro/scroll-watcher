@@ -1,10 +1,10 @@
-# Scroll-watcher
+# Scrollo
 Detect the position of a DOM element compared to the viewport during page scrolling.
 
 ## Install
 
 ```sh
-bower install scroll-watcher
+bower install scrollo
 ```
 
 ## Use
@@ -19,7 +19,7 @@ Element is _alive_ when a single part of it is visible on the viewport.
 You can use **self._activeProgress_** and **self._aliveProgress_** to track the element position.
 
 ```javascript
-var myScrollWatcher = scrollWatcher(elm, {
+var myScrollo = scrollo(elm, {
     persist: false,
     reInitOnResize: true,
     initialize: function(self) {},
@@ -35,10 +35,10 @@ var myScrollWatcher = scrollWatcher(elm, {
 
 ```javascript
 // start watching - auto-called when it's created
-myScrollWatcher.start();
+myScrollo.start();
 
 // stop watching
-myScrollWatcher.stop();
+myScrollo.stop();
 ```
 
 ## Example
@@ -46,7 +46,7 @@ myScrollWatcher.stop();
 ```javascript
 var foo = document.getElementById('foo');
 
-var myScrollWatcher = scrollWatcher(foo, {
+var myScrollo = scrollo(foo, {
     initialize: function(self) {
       foo.style.height = window.innerHeight * 3 + 'px';
     },

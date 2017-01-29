@@ -45,7 +45,7 @@ gulp.task('jslint', function() {
 gulp.task('browserify', function() {
   var b = browserify({
     debug: false,
-    standalone: 'ScrollWatcher',
+    standalone: 'Scrollo',
     entries: dirs.src,
     paths: [dirs.src],
     extensions: ['.js']
@@ -61,7 +61,7 @@ gulp.task('browserify', function() {
       .on('error', function(err) {
         printError('browserify', err.message);
       })
-      .pipe(source('scroll-watcher.js'))
+      .pipe(source('scrollo.js'))
       .pipe(gulp.dest(dirs.dist));
   };
 
