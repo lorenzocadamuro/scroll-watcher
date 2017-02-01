@@ -33,14 +33,14 @@ Element is **active** when it is completely in the viewport.
 var myScrollo = new Scrollo(elm, {
     persist: false,
     autoStart: true,
-    onInitialize: function(status, data, self) {},
-    onBeforeUpdate: function(status, data, self) {},
-    onUpdate: function(status, data, self) {},
-    onEnter: function(status, data, self) {},
-    onActive: function(status, data, self) {},
-    onFocus: function(status, data, self) {},
-    onInactive: function(status, data, self) {},
-    onLeave: function(status, data, self) {}
+    onInitialize: (status, data, self) => {},
+    onBeforeUpdate: (status, data, self) => {},
+    onUpdate: (status, data, self) => {},
+    onEnter: (status, data, self) => {},
+    onActive: (status, data, self) => {},
+    onFocus: (status, data, self) => {},
+    onInactive: (status, data, self) => {},
+    onLeave: (status, data, self) => {}
 });
 ```
 
