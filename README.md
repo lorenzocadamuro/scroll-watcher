@@ -47,7 +47,7 @@ var myScrollo = new Scrollo(elm, {
 ## Methods
 
 ```javascript
-// start watching - auto-called when it's created
+// start watching
 myScrollo.start();
 
 // stop watching
