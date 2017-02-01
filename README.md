@@ -4,30 +4,43 @@ Detect the position of a DOM element compared to the viewport during page scroll
 ## Install
 
 ```sh
-bower install scrollo
+npm install scrollo
 ```
 
-## Use
+## Usage
 
-By default **initialize** is called even on page-resize. To stop this behavior set **reInitOnResize** to **_false_**.
+Element is **alive** when a single part of it is visible on the viewport.<br />
+Element is **active** when it is completely in the viewport.
 
-The callback **onFocus** is called during page scrolling. By default it is called only when element is visible on the viewport (_alive_) - set **persist** to **_true_** in order to call it even when the element is out from the viewport.
+```onFocus``` is called during page scrolling. By default it is called only when element is **alive** – set ```persist``` to ```true``` in order to call it even when the element is out from the viewport.
 
-Element is _active_ when it is the only element present on the viewport.<br />
-Element is _alive_ when a single part of it is visible on the viewport.
+##### Status
+- ```status.isAlive``` - true if is alive
+- ```status.aliveScroll``` - alive scroll value
+- ```status.aliveProgress``` - alive scroll value in percentage
+- ```status.isActive``` - true if is active
+- ```status.activeScroll``` - active scroll value
+- ```status.activeProgress``` - active scroll value in percentage
+- ```status.outerScroll``` - window scroll value
 
-You can use **self._activeProgress_** and **self._aliveProgress_** to track the element position.
+##### Data
+- ```data.height``` - element height
+- ```data.offsetTop``` - element top position relative to the document
+- ```data.maxAliveScroll``` - max alive scroll value
+- ```data.maxActiveScroll``` - max active scroll value
 
 ```javascript
 var myScrollo = scrollo(elm, {
     persist: false,
-    reInitOnResize: true,
-    initialize: function(self) {},
-    onEnter: function(self) {},
-    onActive: function(self) {},
-    onFocus: function(self) {},
-    onInactive: function(self) {},
-    onLeave: function(self) {}
+    autoStart: true,
+    onInitialize: function(status, data, self) {},
+    onBeforeUpdate: function(status, data, self) {},
+    onUpdate: function(status, data, self) {},
+    onEnter: function(status, data, self) {},
+    onActive: function(status, data, self) {},
+    onFocus: function(status, data, self) {},
+    onInactive: function(status, data, self) {},
+    onLeave: function(status, data, self) {}
 });
 ```
 
@@ -39,35 +52,7 @@ myScrollo.start();
 
 // stop watching
 myScrollo.stop();
+
+// update data
+myScrollo.update();
 ```
-
-## Example
-
-```javascript
-var foo = document.getElementById('foo');
-
-var myScrollo = scrollo(foo, {
-    initialize: function(self) {
-      foo.style.height = window.innerHeight * 3 + 'px';
-    },
-    onEnter: function(self) {
-      foo.classList.add('alive');
-    },
-    onActive: function(self) {
-      foo.classList.add('active');
-    },
-    onFocus: function(self) {
-      foo.setAttribute('data-alive-progress', Math.floor(self.aliveProgress * 100));
-      foo.setAttribute('data-active-progress', Math.floor(self.activeProgress * 100));
-    },
-    onInactive: function(self) {
-      foo.classList.remove('active');
-    },
-    onLeave: function(self) {
-      foo.classList.remove('alive');
-    }
-});
-```
-## Demo
-
-[Try the example above](https://output.jsbin.com/lubizu)
