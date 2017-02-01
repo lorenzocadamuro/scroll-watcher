@@ -30,7 +30,7 @@ Element is **active** when it is completely in the viewport.
 - ```data.maxActiveScroll``` - max active scroll value
 
 ```javascript
-var myScrollo = scrollo(elm, {
+var myScrollo = new Scrollo(elm, {
     persist: false,
     autoStart: true,
     onInitialize: function(status, data, self) {},
