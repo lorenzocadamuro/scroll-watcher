@@ -14,7 +14,7 @@ Element is **active** when it is completely in the viewport.
 
 ```onFocus``` is called during page scrolling. By default it is called only when element is **alive** – set ```persist``` to ```true``` in order to call it even when the element is out from the viewport.
 
-##### Status
+#### Status
 - ```status.isAlive``` - true if is alive
 - ```status.aliveScroll``` - alive scroll value
 - ```status.aliveProgress``` - alive scroll value in percentage
@@ -23,7 +23,7 @@ Element is **active** when it is completely in the viewport.
 - ```status.activeProgress``` - active scroll value in percentage
 - ```status.outerScroll``` - window scroll value
 
-##### Data
+#### Data
 - ```data.height``` - element height
 - ```data.offsetTop``` - element top position relative to the document
 - ```data.maxAliveScroll``` - max alive scroll value
