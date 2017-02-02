@@ -48,14 +48,15 @@ gulp.task('browserify', function() {
     standalone: 'Scrollo',
     entries: dirs.src,
     paths: [dirs.src],
-    extensions: ['.js'],
-    require: ['./src/get-offset', './src/extend']
+    extensions: ['.js']
   });
 
   b.transform('babelify', {
     presets: ['es2015'],
     plugins: ['add-module-exports']
   });
+
+  b.plugin('browserify-derequire');
 
   var bundle = function() {
     return b.bundle()
@@ -66,10 +67,10 @@ gulp.task('browserify', function() {
       .pipe(gulp.dest(dirs.dist));
   };
 
-  // b.transform({
-  //   global: true,
-  //   sourcemap: false
-  // }, 'uglifyify');
+  b.transform({
+    global: true,
+    sourcemap: false
+  }, 'uglifyify');
 
   return bundle();
 });

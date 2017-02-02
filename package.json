@@ -26,6 +26,7 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.6",
     "browserify": "^13.3.0",
+    "browserify-derequire": "^0.9.4",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-util": "^3.0.8",
