@@ -1,6 +1,6 @@
 {
   "name": "scrollo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
   "main": "src/index.js",
   "keywords": [

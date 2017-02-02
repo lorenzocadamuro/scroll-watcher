@@ -48,7 +48,8 @@ gulp.task('browserify', function() {
     standalone: 'Scrollo',
     entries: dirs.src,
     paths: [dirs.src],
-    extensions: ['.js']
+    extensions: ['.js'],
+    require: ['./src/get-offset', './src/extend']
   });
 
   b.transform('babelify', {
@@ -65,10 +66,10 @@ gulp.task('browserify', function() {
       .pipe(gulp.dest(dirs.dist));
   };
 
-  b.transform({
-    global: true,
-    sourcemap: false
-  }, 'uglifyify');
+  // b.transform({
+  //   global: true,
+  //   sourcemap: false
+  // }, 'uglifyify');
 
   return bundle();
 });

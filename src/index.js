@@ -1,6 +1,3 @@
-import getOffset from './get-offset';
-import extend from './extend';
-
 class Scrollo {
   constructor(elm, config) {
     this.elm = elm instanceof Element ? elm : null;
