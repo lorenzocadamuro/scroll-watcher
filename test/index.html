@@ -75,23 +75,23 @@
     var foo = document.getElementById('foo');
 
     var myScrollo = new Scrollo(foo, {
-      onBeforeUpdate: function(self) {
+      onBeforeUpdate: function(status, data, self) {
         foo.style.height = window.innerHeight * 3 + 'px';
       },
-      onEnter: function(self) {
+      onEnter: function(status, data, self) {
         foo.classList.add('alive');
       },
-      onActive: function(self) {
+      onActive: function(status, data, self) {
         foo.classList.add('active');
       },
-      onFocus: function(self) {
-        foo.setAttribute('data-alive-progress', Math.floor(self.aliveProgress * 100));
-        foo.setAttribute('data-active-progress', Math.floor(self.activeProgress * 100));
+      onFocus: function(status, data, self) {
+        foo.setAttribute('data-alive-progress', Math.floor(status.aliveProgress * 100));
+        foo.setAttribute('data-active-progress', Math.floor(status.activeProgress * 100));
       },
-      onInactive: function(self) {
+      onInactive: function(status, data, self) {
         foo.classList.remove('active');
       },
-      onLeave: function(self) {
+      onLeave: function(status, data, self) {
         foo.classList.remove('alive');
       }
     });

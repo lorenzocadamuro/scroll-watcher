@@ -2,7 +2,7 @@
   "name": "scrollo",
   "version": "2.0.0",
   "description": "Detect the position of a DOM element compared to the viewport during page scrolling",
-  "main": "dist/scrollo.js",
+  "main": "src/index.js",
   "keywords": [
     "scroll",
     "element",
